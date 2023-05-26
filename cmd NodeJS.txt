@@ -1,0 +1,38 @@
+Microsoft Windows [version 10.0.16299.461]
+(c) 2017 Microsoft Corporation. Tous droits réservés.
+
+D:\DEVLEOPEMENT\Blog\Backend>code .
+
+D:\DEVLEOPEMENT\Blog\Backend>npm i express
+
+added 58 packages in 5s
+
+8 packages are looking for funding
+  run `npm fund` for details
+
+D:\DEVLEOPEMENT\Blog\Backend>npm i mongoose
+
+added 24 packages, and audited 83 packages in 7s
+
+9 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+D:\DEVLEOPEMENT\Blog\Backend>npm i nodemon -g
+
+changed 32 packages in 4s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+D:\DEVLEOPEMENT\Blog\Backend>nodemon server
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+server work
+connected
+
+D:\DEVLEOPEMENT\Blog\Backend>npm i multer => pour Upload image

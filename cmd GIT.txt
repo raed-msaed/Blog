@@ -1,0 +1,54 @@
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT
+$ git clone https://github.com/raed-msaed/Blog.git
+
+Cloning into 'Blog'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT
+$ cd Blog/
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/Blog (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Backend/config/
+        Backend/package-lock.json
+        Backend/package.json
+        Backend/server.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/Blog (main)
+$ git add .
+warning: in the working copy of 'Backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Backend/package.json', LF will be replaced by CRLF the next time Git touches it
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/Blog (main)
+$ git commit -m "Create project Blog with install Lib"
+[main 0e1aa45] Create project Blog with install Lib
+ 4 files changed, 875 insertions(+)
+ create mode 100644 Backend/config/connect.js
+ create mode 100644 Backend/package-lock.json
+ create mode 100644 Backend/package.json
+ create mode 100644 Backend/server.js
+
+SERVDEV@DESKTOP-JDH9GKE MINGW64 /d/DEVLEOPEMENT/Blog (main)
+$ git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 9.65 KiB | 3.22 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/raed-msaed/Blog.git
+   fee2fb5..0e1aa45  main -> main
+branch 'main' set up to track 'origin/main'.
