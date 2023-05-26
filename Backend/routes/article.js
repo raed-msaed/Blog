@@ -1,7 +1,5 @@
 const express = require('express');
 
-const app = express();
-
 const router = express.Router();
 
 const Article = require('../models/article');
@@ -26,7 +24,7 @@ const mystorage = multer.diskStorage({
 const upload = multer({ storage: mystorage })
 /*******************************End Image*************************************/
 
-app.post('/ajout', upload.any('image'), (req, res) => {
+router.post('/ajout', upload.any('image'), (req, res) => {
 
     let data = req.body;
 
@@ -54,23 +52,33 @@ app.post('/ajout', upload.any('image'), (req, res) => {
 
 })
 
-app.get('/all', (req, res) => {
+router.get('/all', (req, res) => {
+    Article.find({})
+        .then(
+            (articles) => {
+                res.status(200).send(articles);
+            }
+        )
+        .catch(
+            (err) => {
+                res.status(400).send(err);
+            }
+        )
+})
+
+router.get('/getbyid/:id', (req, res) => {
 
 })
 
-app.get('/getbyid/:id', (req, res) => {
+router.get('/getbyidauthor/:id', (req, res) => {
 
 })
 
-app.get('/getbyidauthor/:id', (req, res) => {
+router.delete('/supprimer/:id', (req, res) => {
 
 })
 
-app.delete('/supprimer/:id', (req, res) => {
-
-})
-
-app.put('/update/:id', (req, res) => {
+router.put('/update/:id', (req, res) => {
 
 })
 
