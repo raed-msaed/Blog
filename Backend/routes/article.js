@@ -67,18 +67,73 @@ router.get('/all', (req, res) => {
 })
 
 router.get('/getbyid/:id', (req, res) => {
+    let id = req.params.id;
 
+    Article.findOne({ _id: id })
+        .then(
+            (articles) => {
+                res.status(200).send(articles);
+            }
+        )
+        .catch(
+            (err) => {
+                res.status(400).send(err);
+            }
+        )
 })
 
 router.get('/getbyidauthor/:id', (req, res) => {
+    let id = req.params.id;
 
+    Article.find({ idAuthor: id })
+        .then(
+            (articles) => {
+                res.status(200).send(articles);
+            }
+        )
+        .catch(
+            (err) => {
+                res.status(400).send(err);
+            }
+        )
 })
 
 router.delete('/supprimer/:id', (req, res) => {
-
+    let id = req.params.id;
+    Article.findByIdAndDelete({_id:id})
+        .then(
+            (articles) => {
+                res.status(200).send(articles);
+            }
+        )
+        .catch(
+            (err) => {
+                res.status(400).send(err);
+            }
+        )
 })
 
-router.put('/update/:id', (req, res) => {
+router.put('/update/:id', upload.any('image'), (req, res) => {
+    let id = req.params.id;
+    let data = req.body;
+    data.tags = data.tags.split(',');
+    if(filename.length > 0){
+        data.image = filename;
+    }
+    Article.findByIdAndUpdate({_id:id}, data)
+        .then(
+            (articles) => {
+                filename = '';
+                res.status(200).send(articles);
+            }
+        )
+        .catch(
+            (err) => {
+                res.status(400).send(err);
+            }
+        )
+    
+
 
 })
 
