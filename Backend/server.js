@@ -8,6 +8,8 @@ require('./config/connect');
 
 const app = express();
 
+app.use(express.json()); //for accept data formatr json (where used login & password)
+
 app.use('/article', articleApi);
 
 app.use('/author', authorApi);

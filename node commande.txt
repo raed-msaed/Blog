@@ -1,0 +1,7 @@
+D:\raed\Workshop\Blog\Backend>npm init
+D:\raed\Workshop\Blog\Backend>npm i express
+D:\raed\Workshop\Blog\Backend>npm i mongoose
+D:\raed\Workshop\Blog\Backend>npm i nodemon -g
+D:\raed\Workshop\Blog\Backend>nodemon server
+
+PS D:\raed\Workshop\Blog\Backend> npm i bcrypt

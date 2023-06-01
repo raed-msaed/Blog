@@ -36,3 +36,4 @@ server work
 connected
 
 D:\DEVLEOPEMENT\Blog\Backend>npm i multer => pour Upload image
+PS D:\raed\Workshop\Blog\Backend> npm i jsonwebtoken    => install bibliotheque token

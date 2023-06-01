@@ -1,0 +1,40 @@
+$ npm i nodemon -g => restart automatique server after change code
+
+$ nodemon server => executer server with nodemon
+
+$ git init => initialiser git
+
+$ git add .
+
+$ git commit -m "create Blog Project"
+
+$ git remote add origin https://github.com/raed-msaed/Blog.git
+
+$ git branch -m main
+
+$ git push -u origin master
+
+$ git reset --hard origin/main => probleme branch resolut
+
+
+
+
+
+/*************************************************************************************/
+$ git clone https://github.com/raed-msaed/nodejs.git
+
+$ npm install
+
+$ npm run build
+
+
+/************************************************************************************/
+commande base git:
+
+$ git status
+
+$ git add .
+
+$ git commit -m "message"
+
+$ git push -u origin main
