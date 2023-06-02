@@ -4,17 +4,15 @@
             <div class="col-lg-10">
                 <div class="row g-4 g-lg-5 text-center text-lg-start justify-content-center justify-content-lg-start">
                     <div class="col-lg-3 col-md-4 col-sm-5 col-6">
-                        <img class="img-fluid rounded" src="assets/assets/images/author/thomas-macaulay.jpg"
+                        <img class="img-fluid rounded" [src]="'http://127.0.0.1:3000/getimage/' + author.image"
                             alt="Thomas Macaulay" width="250" height="250">
                     </div>
                     <div class="col-lg-9 col-md-12">
                         <p class="mb-2"><span class="fw-bold text-black">03</span> Published posts</p>
-                        <h1 class="h3 text-dark mb-3">Thomas Macaulay</h1>
+                        <h1 class="h3 text-dark mb-3">{{author.name + ' ' + author.lastname}}</h1>
                         <div class="content">
-                            <p>Thomas Macaulay is a writer based in New York City. He&rsquo;s interested in all things
-                                tech, science, and photography related, and likes to yo-yo in his free time.</p>
-                            <p>Follow him <a target="_blank" href="https://twitter.com/thomas-macaulay">on Twitter</a>.
-                            </p>
+                            <p>{{ author.about}}</p>
+                            <button class="btn btn-dark" routerLink="/create"> Create new Article </button>
                         </div>
                     </div>
                 </div>

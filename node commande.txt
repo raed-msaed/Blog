@@ -5,3 +5,4 @@ D:\raed\Workshop\Blog\Backend>npm i nodemon -g
 D:\raed\Workshop\Blog\Backend>nodemon server
 
 PS D:\raed\Workshop\Blog\Backend> npm i bcrypt
+PS D:\DEVLEOPEMENT\Blog\Blog\Backend> npm i cors
