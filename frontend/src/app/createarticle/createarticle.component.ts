@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./createarticle.component.css']
 })
 export class CreatearticleComponent implements OnInit {
+  article: any = {
 
+    title: '',
+    content: '',
+    tags: [],
+    description: ''
+
+  }
   constructor() { }
 
   ngOnInit(): void {
