@@ -7,25 +7,29 @@
 
 
 
-        <input type="text" class="form-control m-1" placeholder="title">
+        <input [(ngModel)]="article.title" type="text" class="form-control m-1" placeholder="title">
         <ul>
-            <li> tag </li>
+            <li *ngFor="let item of article.tags"> {{item}} </li>
         </ul>
         <div class="row m-1">
-            <input type="text" class="form-control w-75" placeholder="tag">
-            <button class="btn btn-dark w-25">Add</button>
+            <input [(ngModel)]="tag" type="text" class="form-control w-75" placeholder="tag">
+            <button (click)="article.tags.push(tag); tag = ''"  class="btn btn-dark w-25">Add</button>
 
         </div>
 
-        <input type="file" class="form-control m-1" placeholder="image">
-        <textarea title="" id="" cols="30" rows="4" placeholder="description" class="form-control m-1"></textarea>
-
-        <div class="m-1">
-            <textarea [placeholder]="'Enter text here...'"></textarea>
-
+        <input type="file" (change)="select($event)" class="form-control m-1" placeholder="image">
+        <textarea [(ngModel)]="article.description" title="" id="" cols="30" rows="4" placeholder="description" class="form-control m-1"></textarea>
+       
+        <div class="NgxEditor__Wrapper">
+            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+            <ngx-editor [editor]="editor" [(ngModel)]="article.content" [disabled]="false" [placeholder]="'Type here...'"></ngx-editor>
         </div>
 
-        <button class="btn btn-dark form-control m-1">create</button>
+        <!--div class="m-1">
+            <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="article.content"></angular-editor>
+        </div-->
+
+        <button (click)="create()" class="btn btn-dark form-control m-1">create</button>
 
 
     </div>

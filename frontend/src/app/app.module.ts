@@ -18,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { NgxEditorModule } from 'ngx-editor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule,
+    NgxEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
