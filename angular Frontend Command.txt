@@ -3,3 +3,5 @@
 npm install @kolkov/angular-editor --save => biblio editor text
 
 PS D:\raed\Workshop\Blog\frontend> npm install ngx-editor --save => biblio editor text
+
+PS D:\raed\Workshop\Blog\frontend> ng g g service/auth   =>Commande Create Guarde Service
