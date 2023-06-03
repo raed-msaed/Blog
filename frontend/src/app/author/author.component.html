@@ -26,7 +26,7 @@
         <div *ngFor="let item of articles" class="col-lg-6">
             <article class="card post-card h-100 border-0 bg-transparent">
                 <div class="card-body">
-                    <a class="d-block" href="blog-single.html" title="The AGI hype train is running out of steam">
+                    <a class="d-block" [routerLink]="['/article', item._id]" title="The AGI hype train is running out of steam">
                         <div class="post-image position-relative">
                             <img class="w-100 h-auto rounded" [src]="'http://127.0.0.1:3000/getimage/' + item.image"
                                 alt="The AGI hype train is running out of steam" width="970" height="500">
@@ -39,7 +39,7 @@
                         </li>
                        
                     </ul>
-                    <a class="d-block" href="blog-single.html" title="The AGI hype train is running out of steam">
+                    <a class="d-block" [routerLink]="['/article', item._id]" title="The AGI hype train is running out of steam">
                         <h3 class="mb-3 post-title">
                            {{ item.title }}
                         </h3>

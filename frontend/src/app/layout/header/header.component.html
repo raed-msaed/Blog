@@ -41,10 +41,18 @@
                                 <a class="nav-link" [routerLink]="['/privacy']">Privacy</a>
                             </li>
                             <li class="nav-item @@contact" *ngIf="_auth.isLoggedIn()=== true">
-                                <a class="nav-link" [routerLink]="['/author', _auth.getAuthorDataFromToken()._id]">My
-                                    account</a>
+                                <a class="nav-link" [routerLink]="['/author', _auth.getAuthorDataFromToken()._id]">My account</a>
                             </li>
-
+                            <li class="nav-item @@contact" *ngIf="_auth.isLoggedIn()=== false">
+                                <a class="nav-link" [routerLink]="['/register']">Register</a>
+                            </li>
+                            <li class="nav-item @@contact" *ngIf="_auth.isLoggedIn()=== false">
+                                <a class="nav-link" [routerLink]="['/login']">Login</a>
+                            </li>
+                            <li class="nav-item @@contact" *ngIf="_auth.isLoggedIn()=== true">
+                                <a class="nav-link" (click)="logout()" >Logout</a>
+                            </li>
+                            
                         </ul>
 
 
